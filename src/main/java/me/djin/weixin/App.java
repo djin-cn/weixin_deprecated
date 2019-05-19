@@ -1,7 +1,5 @@
 package me.djin.weixin;
 
-import com.google.gson.Gson;
-
 import me.djin.weixin.api.BaseSns;
 import me.djin.weixin.pojo.basesns.GetUserAccessTokenResponse;
 
@@ -23,7 +21,6 @@ public class App
     public static void testBaseSns_getUserAccessToken() {
     	BaseSns sns = ApiInstance.createBaseSns();
     	GetUserAccessTokenResponse response = sns.getUserAccessToken(APPID, APPSECRET, "081NZwU12sjUMU0wQTW12DleU12NZwUY");
-    	Gson gson = new Gson();
-    	System.out.println(gson.toJson(response));
+    	System.out.println(response);
     }
 }
